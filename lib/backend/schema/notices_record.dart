@@ -55,6 +55,21 @@ class NoticesRecord extends FirestoreRecord {
   DocumentReference? get collegeId => _collegeId;
   bool hasCollegeId() => _collegeId != null;
 
+  // "is_global" field.
+  bool? _isGlobal;
+  bool get isGlobal => _isGlobal ?? false;
+  bool hasIsGlobal() => _isGlobal != null;
+
+  // "attachment_name" field.
+  String? _attachmentName;
+  String get attachmentName => _attachmentName ?? '';
+  bool hasAttachmentName() => _attachmentName != null;
+
+  // "attachment_link" field.
+  String? _attachmentLink;
+  String get attachmentLink => _attachmentLink ?? '';
+  bool hasAttachmentLink() => _attachmentLink != null;
+
   void _initializeFields() {
     _category = snapshotData['category'] as String?;
     _createdAt = snapshotData['created_at'] as DateTime?;
@@ -64,6 +79,9 @@ class NoticesRecord extends FirestoreRecord {
     _targetRole = snapshotData['target_role'] as String?;
     _title = snapshotData['title'] as String?;
     _collegeId = snapshotData['college_id'] as DocumentReference?;
+    _isGlobal = snapshotData['is_global'] as bool?;
+    _attachmentName = snapshotData['attachment_name'] as String?;
+    _attachmentLink = snapshotData['attachment_link'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -109,6 +127,9 @@ Map<String, dynamic> createNoticesRecordData({
   String? targetRole,
   String? title,
   DocumentReference? collegeId,
+  bool? isGlobal,
+  String? attachmentName,
+  String? attachmentLink,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -120,6 +141,9 @@ Map<String, dynamic> createNoticesRecordData({
       'target_role': targetRole,
       'title': title,
       'college_id': collegeId,
+      'is_global': isGlobal,
+      'attachment_name': attachmentName,
+      'attachment_link': attachmentLink,
     }.withoutNulls,
   );
 
@@ -138,7 +162,10 @@ class NoticesRecordDocumentEquality implements Equality<NoticesRecord> {
         e1?.isActive == e2?.isActive &&
         e1?.targetRole == e2?.targetRole &&
         e1?.title == e2?.title &&
-        e1?.collegeId == e2?.collegeId;
+        e1?.collegeId == e2?.collegeId &&
+        e1?.isGlobal == e2?.isGlobal &&
+        e1?.attachmentName == e2?.attachmentName &&
+        e1?.attachmentLink == e2?.attachmentLink;
   }
 
   @override
@@ -150,7 +177,10 @@ class NoticesRecordDocumentEquality implements Equality<NoticesRecord> {
         e?.isActive,
         e?.targetRole,
         e?.title,
-        e?.collegeId
+        e?.collegeId,
+        e?.isGlobal,
+        e?.attachmentName,
+        e?.attachmentLink
       ]);
 
   @override

@@ -29,3 +29,6 @@ export '/edit_notice_page/edit_notice_page_widget.dart'
     show EditNoticePageWidget;
 export '/disabled_notices/disabled_notices_widget.dart'
     show DisabledNoticesWidget;
+export '/profile_page/profile_page_widget.dart' show ProfilePageWidget;
+export '/global_notices_page/global_notices_page_widget.dart'
+    show GlobalNoticesPageWidget;

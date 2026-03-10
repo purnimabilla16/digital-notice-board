@@ -54,10 +54,19 @@ class _DisabledNoticesWidgetState extends State<DisabledNoticesWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
-          leading: Icon(
-            Icons.arrow_back,
-            color: FlutterFlowTheme.of(context).primary,
-            size: 30.0,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.safePop();
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: FlutterFlowTheme.of(context).primary,
+              size: 30.0,
+            ),
           ),
           title: Text(
             'DISABLED NOTICES',

@@ -238,6 +238,62 @@ class _SuperAdminDashboardWidgetState extends State<SuperAdminDashboardWidget> {
                         },
                         text: 'Manage Users',
                         icon: Icon(
+                          Icons.people,
+                          size: 50.0,
+                        ),
+                        options: FFButtonOptions(
+                          height: 40.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              16.0, 0.0, 16.0, 0.0),
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 20.0, 0.0),
+                          iconColor:
+                              FlutterFlowTheme.of(context).primaryBackground,
+                          color: FlutterFlowTheme.of(context).secondary,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    font: GoogleFonts.robotoCondensed(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontStyle,
+                                    ),
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                    fontSize: 18.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
+                          elevation: 1.0,
+                          borderRadius: BorderRadius.circular(6.0),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: 80.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        borderRadius: BorderRadius.circular(7.0),
+                        shape: BoxShape.rectangle,
+                        border: Border.all(
+                          color: FlutterFlowTheme.of(context).primaryBackground,
+                          width: 1.0,
+                        ),
+                      ),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          context.pushNamed(ProfilePageWidget.routeName);
+                        },
+                        text: 'My Profile',
+                        icon: Icon(
                           Icons.person,
                           size: 50.0,
                         ),

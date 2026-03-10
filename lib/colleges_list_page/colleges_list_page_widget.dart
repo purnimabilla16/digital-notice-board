@@ -51,10 +51,19 @@ class _CollegesListPageWidgetState extends State<CollegesListPageWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
-          leading: Icon(
-            Icons.arrow_back,
-            color: FlutterFlowTheme.of(context).primary,
-            size: 30.0,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.pushNamed(SuperAdminDashboardWidget.routeName);
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: FlutterFlowTheme.of(context).primary,
+              size: 30.0,
+            ),
           ),
           title: Text(
             'COLLEGES',

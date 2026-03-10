@@ -363,6 +363,110 @@ class _FacultyDashboardWidgetState extends State<FacultyDashboardWidget> {
                                 ),
                               ),
                             ),
+                            Container(
+                              width: double.infinity,
+                              height: 80.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                borderRadius: BorderRadius.circular(7.0),
+                                shape: BoxShape.rectangle,
+                                border: Border.all(
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
+                                  width: 1.0,
+                                ),
+                              ),
+                              child: FFButtonWidget(
+                                onPressed: () async {
+                                  context.pushNamed(
+                                      GlobalNoticesPageWidget.routeName);
+                                },
+                                text: 'Global Notices',
+                                icon: Icon(
+                                  Icons.star_rate,
+                                  size: 50.0,
+                                ),
+                                options: FFButtonOptions(
+                                  width: 100.0,
+                                  height: 40.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16.0, 0.0, 16.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  iconColor: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
+                                  color: FlutterFlowTheme.of(context).secondary,
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .titleSmallFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                        fontSize: 18.0,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts:
+                                            !FlutterFlowTheme.of(context)
+                                                .titleSmallIsCustom,
+                                      ),
+                                  elevation: 1.0,
+                                  borderRadius: BorderRadius.circular(6.0),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              width: double.infinity,
+                              height: 80.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                borderRadius: BorderRadius.circular(7.0),
+                                shape: BoxShape.rectangle,
+                                border: Border.all(
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
+                                  width: 1.0,
+                                ),
+                              ),
+                              child: FFButtonWidget(
+                                onPressed: () async {
+                                  context
+                                      .pushNamed(ProfilePageWidget.routeName);
+                                },
+                                text: 'My Profile',
+                                icon: Icon(
+                                  Icons.person,
+                                  size: 50.0,
+                                ),
+                                options: FFButtonOptions(
+                                  width: 100.0,
+                                  height: 40.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16.0, 0.0, 16.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  iconColor: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
+                                  color: FlutterFlowTheme.of(context).secondary,
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .titleSmallFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                        fontSize: 18.0,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts:
+                                            !FlutterFlowTheme.of(context)
+                                                .titleSmallIsCustom,
+                                      ),
+                                  elevation: 1.0,
+                                  borderRadius: BorderRadius.circular(6.0),
+                                ),
+                              ),
+                            ),
                           ].divide(SizedBox(height: 20.0)),
                         ),
                       ),

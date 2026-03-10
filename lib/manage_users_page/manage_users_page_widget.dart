@@ -56,10 +56,19 @@ class _ManageUsersPageWidgetState extends State<ManageUsersPageWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
-          leading: Icon(
-            Icons.arrow_back,
-            color: FlutterFlowTheme.of(context).primary,
-            size: 30.0,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.safePop();
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: FlutterFlowTheme.of(context).primary,
+              size: 30.0,
+            ),
           ),
           title: Text(
             'MANAGE USERS',
@@ -139,7 +148,7 @@ class _ManageUsersPageWidgetState extends State<ManageUsersPageWidget> {
                                 20.0, 0.0, 20.0, 0.0),
                             child: Container(
                               width: double.infinity,
-                              height: 100.0,
+                              height: 120.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).secondary,
                                 borderRadius: BorderRadius.circular(7.0),

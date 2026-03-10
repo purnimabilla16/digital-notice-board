@@ -27,6 +27,10 @@
           "order": "ASCENDING"
         },
         {
+          "fieldPath": "is_global",
+          "order": "ASCENDING"
+        },
+        {
           "fieldPath": "target_role",
           "order": "ASCENDING"
         },
@@ -53,6 +57,10 @@
           "order": "ASCENDING"
         },
         {
+          "fieldPath": "is_global",
+          "order": "ASCENDING"
+        },
+        {
           "fieldPath": "target_role",
           "order": "ASCENDING"
         },
@@ -72,6 +80,24 @@
         },
         {
           "fieldPath": "college_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "created_at",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "notices",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "is_active",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "is_global",
           "order": "ASCENDING"
         },
         {

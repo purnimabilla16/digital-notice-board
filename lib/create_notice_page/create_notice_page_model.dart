@@ -5,6 +5,10 @@ import 'create_notice_page_widget.dart' show CreateNoticePageWidget;
 import 'package:flutter/material.dart';
 
 class CreateNoticePageModel extends FlutterFlowModel<CreateNoticePageWidget> {
+  ///  Local state fields for this page.
+
+  bool isGlobalNotice = false;
+
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
@@ -39,6 +43,18 @@ class CreateNoticePageModel extends FlutterFlowModel<CreateNoticePageWidget> {
   // State field(s) for TargetRole widget.
   String? targetRoleValue;
   FormFieldController<String>? targetRoleValueController;
+  // State field(s) for AttachmentName widget.
+  FocusNode? attachmentNameFocusNode;
+  TextEditingController? attachmentNameTextController;
+  String? Function(BuildContext, String?)?
+      attachmentNameTextControllerValidator;
+  // State field(s) for AttachementLink widget.
+  FocusNode? attachementLinkFocusNode;
+  TextEditingController? attachementLinkTextController;
+  String? Function(BuildContext, String?)?
+      attachementLinkTextControllerValidator;
+  // State field(s) for Switch widget.
+  bool? switchValue;
 
   @override
   void initState(BuildContext context) {
@@ -53,5 +69,11 @@ class CreateNoticePageModel extends FlutterFlowModel<CreateNoticePageWidget> {
 
     descriptionFocusNode?.dispose();
     descriptionTextController?.dispose();
+
+    attachmentNameFocusNode?.dispose();
+    attachmentNameTextController?.dispose();
+
+    attachementLinkFocusNode?.dispose();
+    attachementLinkTextController?.dispose();
   }
 }

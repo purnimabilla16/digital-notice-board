@@ -8,11 +8,19 @@ class NoticesListPageModel extends FlutterFlowModel<NoticesListPageWidget> {
 
   bool showOnlyMyNotices = false;
 
-  String searchText = '\"\"';
+  ///  State fields for stateful widgets in this page.
+
+  // State field(s) for Search widget.
+  FocusNode? searchFocusNode;
+  TextEditingController? searchTextController;
+  String? Function(BuildContext, String?)? searchTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {}
+  void dispose() {
+    searchFocusNode?.dispose();
+    searchTextController?.dispose();
+  }
 }

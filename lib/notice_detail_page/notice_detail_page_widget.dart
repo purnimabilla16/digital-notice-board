@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -79,10 +80,19 @@ class _NoticeDetailPageWidgetState extends State<NoticeDetailPageWidget> {
             appBar: AppBar(
               backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
               automaticallyImplyLeading: false,
-              leading: Icon(
-                Icons.arrow_back,
-                color: FlutterFlowTheme.of(context).primary,
-                size: 30.0,
+              leading: InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  context.safePop();
+                },
+                child: Icon(
+                  Icons.arrow_back,
+                  color: FlutterFlowTheme.of(context).primary,
+                  size: 30.0,
+                ),
               ),
               title: Text(
                 'NOTICE',
@@ -408,6 +418,54 @@ class _NoticeDetailPageWidgetState extends State<NoticeDetailPageWidget> {
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
+                                if (noticeDetailPageNoticesRecord
+                                            .attachmentLink !=
+                                        '')
+                                  Align(
+                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        await launchURL(
+                                            noticeDetailPageNoticesRecord
+                                                .attachmentLink);
+                                      },
+                                      text: noticeDetailPageNoticesRecord
+                                          .attachmentName,
+                                      icon: Icon(
+                                        Icons.attach_file,
+                                        size: 20.0,
+                                      ),
+                                      options: FFButtonOptions(
+                                        height: 20.0,
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 0.0, 16.0, 0.0),
+                                        iconPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                0.0, 0.0, 0.0, 0.0),
+                                        iconColor: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                        color: Color(0x00141414),
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmallFamily,
+                                              color: Color(0xFF0000FF),
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.bold,
+                                              decoration:
+                                                  TextDecoration.underline,
+                                              useGoogleFonts:
+                                                  !FlutterFlowTheme.of(context)
+                                                      .titleSmallIsCustom,
+                                            ),
+                                        elevation: 0.0,
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                    ),
+                                  ),
                               ],
                             );
                           },

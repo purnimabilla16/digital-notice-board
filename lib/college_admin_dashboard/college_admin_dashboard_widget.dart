@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'college_admin_dashboard_model.dart';
 export 'college_admin_dashboard_model.dart';
@@ -166,7 +167,8 @@ class _CollegeAdminDashboardWidgetState
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(40.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                          40.0, 20.0, 40.0, 40.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -236,6 +238,10 @@ class _CollegeAdminDashboardWidgetState
                                     );
                                   },
                                   text: 'Manage Faculty',
+                                  icon: Icon(
+                                    Icons.person_4_sharp,
+                                    size: 50.0,
+                                  ),
                                   options: FFButtonOptions(
                                     height: 40.0,
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -297,6 +303,10 @@ class _CollegeAdminDashboardWidgetState
                                 );
                               },
                               text: 'Manage Students',
+                              icon: FaIcon(
+                                FontAwesomeIcons.userGraduate,
+                                size: 50.0,
+                              ),
                               options: FFButtonOptions(
                                 height: 40.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -353,7 +363,11 @@ class _CollegeAdminDashboardWidgetState
                                   }.withoutNulls,
                                 );
                               },
-                              text: 'Approve / Post Notices',
+                              text: 'Manage / Post Notices',
+                              icon: Icon(
+                                Icons.push_pin_sharp,
+                                size: 50.0,
+                              ),
                               options: FFButtonOptions(
                                 height: 40.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -407,6 +421,107 @@ class _CollegeAdminDashboardWidgetState
                                 );
                               },
                               text: 'View Disabled Notices',
+                              icon: Icon(
+                                Icons.disabled_visible,
+                                size: 50.0,
+                              ),
+                              options: FFButtonOptions(
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context).secondary,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .titleSmallFamily,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      fontSize: 18.0,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts:
+                                          !FlutterFlowTheme.of(context)
+                                              .titleSmallIsCustom,
+                                    ),
+                                elevation: 1.0,
+                                borderRadius: BorderRadius.circular(6.0),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: double.infinity,
+                            height: 80.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              borderRadius: BorderRadius.circular(7.0),
+                              shape: BoxShape.rectangle,
+                              border: Border.all(
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                width: 1.0,
+                              ),
+                            ),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                    GlobalNoticesPageWidget.routeName);
+                              },
+                              text: 'Global Notices',
+                              icon: Icon(
+                                Icons.star_rate,
+                                size: 50.0,
+                              ),
+                              options: FFButtonOptions(
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context).secondary,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .titleSmallFamily,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      fontSize: 18.0,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts:
+                                          !FlutterFlowTheme.of(context)
+                                              .titleSmallIsCustom,
+                                    ),
+                                elevation: 1.0,
+                                borderRadius: BorderRadius.circular(6.0),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: double.infinity,
+                            height: 80.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              borderRadius: BorderRadius.circular(7.0),
+                              shape: BoxShape.rectangle,
+                              border: Border.all(
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                width: 1.0,
+                              ),
+                            ),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(ProfilePageWidget.routeName);
+                              },
+                              text: 'My Profile',
+                              icon: Icon(
+                                Icons.person,
+                                size: 50.0,
+                              ),
                               options: FFButtonOptions(
                                 height: 40.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(

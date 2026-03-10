@@ -21,6 +21,16 @@ class EditNoticePageModel extends FlutterFlowModel<EditNoticePageWidget> {
   // State field(s) for TargetRole widget.
   String? targetRoleValue;
   FormFieldController<String>? targetRoleValueController;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode3;
+  TextEditingController? textController3;
+  String? Function(BuildContext, String?)? textController3Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode4;
+  TextEditingController? textController4;
+  String? Function(BuildContext, String?)? textController4Validator;
+  // State field(s) for Switch widget.
+  bool? switchValue;
 
   @override
   void initState(BuildContext context) {}
@@ -32,5 +42,11 @@ class EditNoticePageModel extends FlutterFlowModel<EditNoticePageWidget> {
 
     textFieldFocusNode2?.dispose();
     textController2?.dispose();
+
+    textFieldFocusNode3?.dispose();
+    textController3?.dispose();
+
+    textFieldFocusNode4?.dispose();
+    textController4?.dispose();
   }
 }
